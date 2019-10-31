@@ -1,11 +1,8 @@
 (() => {
   var jq = document.createElement('script');
-  jq.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js";
-  document.getElementsByTagName('head')[0].appendChild(jq);
-
-  setTimeout(() => {
-    
-    // DEFINE THE BANK BEING ACCESSED
+  
+  jq.onload = fucntion () {
+    // DEFINE DATABASE BEING ACCESSED
     BD_NAME = 'dbname';
 
     // CHANGE SQL OUTPUT ORDER ACCORDING TO TABLES INTEGRITY RULE !!
@@ -140,5 +137,8 @@
         allTableCreators = allTableCreators.replace(/(datetime)/gi, 'BIGINT');
         console.log(allTableCreators + allInserts);
       });
-  }, 5000);
+  }
+  
+  jq.src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js";
+  document.getElementsByTagName('head')[0].appendChild(jq);
 })();
