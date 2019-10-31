@@ -1,7 +1,7 @@
 (() => {
   var jq = document.createElement('script');
   
-  jq.onload = fucntion () {
+  jq.onload = function () {
     // DEFINE DATABASE BEING ACCESSED
     BD_NAME = 'dbname';
 
